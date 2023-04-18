@@ -16,6 +16,15 @@ form.addEventListener("submit", function (event) {
     }
 });
 
+function mostrarCom() {
+    document.getElementById("comunicar").style.display = "block";
+}
+
+function mostrarRes() {
+    document.getElementById("reservar").style.display = "block";
+}
+
+
 $(document).ready(function () {
 
     $("#boton").click(function () {
