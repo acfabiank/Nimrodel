@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="v2.css">
+  <title>NimRodel Restaurant y Pub</title>
+  <link rel="icon" type="image/png" href="img/n.png">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+    <div class="container-fluid">
+      <img src="img/n.png" alt="" width="30" height="24">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active text-light" aria-current="page" href="#carouselExampleCaptions">Nuestros
+            Productos</a>
+          <a class="nav-link text-light" href="#popsobre" tabindex="-1" aria-disabled="true" id="sobrenos">Sobre
+            Nosotros</a>
+          <a class="nav-link text-light" href="#com" onclick="mostrarCom()">Comuniquemonos</a>
+          <a class="nav-link text-light" href="#res" onclick="mostrarRes()">Reserva</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <main>
+
+    <section class="py-3 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Nimrodel Pub Restaurant</h1>
+          <p class="lead text-muted des">Destacado de la semana</p>
+          <p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-4 mx-4 my-2">
+      <div class="col" id="gaseosa">
+        <div class="card h-100">
+          <img src="img/bebidas.jpg" class="card-img-top" class="card-img-top" alt="..." height="250px">
+          <div class="card-body">
+            <h5 class="card-title">GASEOSAS</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" id="tab">
+        <div class="card h-100">
+          <img src="img/tablas.jpg" class="card-img-top" class="card-img-top" alt="..." height="250px">
+          <div class="card-body">
+            <h5 class="card-title">TABLAS</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" id="shp">
+        <div class="card h-100">
+          <img src="img/shop.jpeg" class="card-img-top" class="card-img-top" alt="..." height="250px">
+          <div class="card-body">
+            <h5 class="card-title">SHOP CERVEZA</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- COMUNICACIONES -->
+
+    <div class="contenedor text-light bg-dark shadow" id="comunicar">
+      <h1 class="fw-normal text-center">Comuniquemonos</h1>
+      <form class="row g-3" action="" id="com" method="cue" onsubmit="envioDatos2()">
+        <!---Nombre-->
+        <div class="col-md-12">
+          <label for="inputEmail4" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombrecom" placeholder="xxxx xxxx">
+          <!-- <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="form-control" placeholder="xxxx xxxx"> -->
+        </div>
+        <!--Email-->
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailcom" placeholder="xx@xx">
+        </div>
+        <!--Telefono-->
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Telefono</label>
+          <input type="text" class="form-control" id="telefonocom" placeholder="xxxxxxxx">
+        </div>
+        <!--Motivo-->
+
+        <div class="col-md-12">
+          <label for="inputState" class="form-label">Motivo</label>
+          <select id="motivocom" class="form-select">
+            <option value="Felicitacion" selected>Felicitación</option>
+            <option value="Reclamo">Reclamo</option>
+            <option value="Sugerencia">Sugerencia</option>
+          </select>
+        </div>
+
+        <div class="col-md-12">
+          <label for="inputCity" class="form-label">Motivo</label>
+          <textarea type="text" class="form-control" id="inputCity">
+          </textarea>
+        </div>
+        <!--boton-->
+        <div class="col-12 text-center">
+          <input type="submit" value="Enviar" class="btn btn-secondary" id="botoncom"></button>
+          <br>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- RESERVA -->
+
+    <div class="contenedor text-light bg-dark shadow" id="reservar">
+      <form class="row g-3" action="" id="res" method="get">
+
+        <div class="col-md-12">
+          <h1 class="fw-normal text-center">Reserva</h1>
+          <label for="inputEmail4" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombreres">
+          <!-- pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+\s[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$" -->
+        </div>
+
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+          <!-- pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required -->
+        </div>
+
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Telefono</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="xxxxxxxx">
+          <!-- required pattern="^\+56\d{9}$" -->
+        </div>
+
+        <div class="col-md-12 Fecha text-center">
+          <label for="inputCity" class="form-label">Fecha</label>
+          <br>
+          <input type="date" name="Fecha" id="fechares">
+        </div>
+
+        <div class="col-md-12 text-center">
+          <label for="inputCity" class="form-label">Hora</label>
+          <br>
+          <input type="time" name="Hora" id="horares">
+        </div>
+
+        <div class="col-md-12 text-center">
+          <label for="inputCity" class="form-label">Cantidad de Asistentes</label>
+          <br>
+          <input type="number" name="Asistentes" id="asistentesres">
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-secondary" id="boton">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="carrusel p-2 py-2 col-10">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/chorillana.jpg" class="d-block w-100" alt="chorrillana">
+          </div>
+          <div class="carousel-item">
+            <img src="img/mojito.jpg" class="d-block w-100" alt="mojito">
+          </div>
+          <div class="carousel-item">
+            <img src="img/vino.jpg" class="d-block w-100" alt="vino">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- popup -->
+
+    <div class="offcanvas-header bg-dark text-white position-fixed top-50 start-50 translate-middle" id="popgas">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close" onclick="sgas()" id="botong"></button>
+      <div class="offcanvas-body">
+        <h5 class="card-title">GASEOSAS</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img src="img/bebidas.jpg" class="card-img-top" class="card-img-top" alt="..." width="500px" id="gaseosa">
+      </div>
+    </div>
+
+
+    <div class="offcanvas-header bg-dark text-white position-fixed top-50 start-50 translate-middle" id="poptab">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close" onclick="stab()" id="botont"></button>
+      <div class="offcanvas-body">
+        <h5 class="card-title">TABLAS</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img src="img/tablas.jpg" class="card-img-top" class="card-img-top" alt="..." width="500px" id="gaseosa">
+      </div>
+    </div>
+
+    <div class="offcanvas-header bg-dark text-white position-fixed top-50 start-50 translate-middle" id="popshop">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close" onclick="sshop()" id="botons"></button>
+      <div class="offcanvas-body">
+        <h5 class="card-title">SHOPS Y CERVEZAS</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img src="img/shop.jpeg" class="card-img-top" class="card-img-top" alt="..." width="500px" id="gaseosa">
+      </div>
+    </div>
+
+
+
+
+    <!-- POPUP DE SOBRE NOSOTROS -->
+    <div id="popsobre" class="container position-fixed top-50 start-50 translate-middle">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close" id="bx"></button>
+      <div id="cont" class="text-light container text-center">
+        <h3>NimRodel Pub y Restaurant</h3>
+        <p>Nimrodel Significa “dama de la cueva blanca”. Fue una elfa silvana que vivió durante la Tercera Edad del Sol
+          en el bosque de Lothlórien. En honor a su nombre, se acuña Nimrodel al río que nace en las Montañas Nubladas
+        </p>
+        <img src="img/IMG1.jpg" alt="" width="150px">
+
+      </div>
+      <div class="m-4 text-center">
+
+        <button class="btn btn-light m-2" id="ant">Anterior</button>
+        <button class="btn btn-light m-2" id="sig">Siguiente</button>
+
+
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+  <footer>
+
+    <div class="regis">
+      <h6>Todos los derechos reservados &REG;</h6>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+  <script src="pub.js"></script>
+
+
+</body>
+
+</html>

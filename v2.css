@@ -1,0 +1,128 @@
+.fotos {
+    /* text-align: center;
+    margin: 0 auto; */
+
+    margin: 5%;
+
+}
+
+nav {
+    background-image: url(img/fondo.jpg);
+    background-size: contain;
+    opacity: 0.8;
+}
+
+.contenedor {
+    /* background-color: lightblue; */
+    border-radius: 4%;
+    width: 70%;
+    margin: auto;
+    margin-top: 7%;
+    padding: 4%;
+    opacity: 0.7;
+    margin-bottom: 5%;
+    max-width: 500px;
+}
+
+.des {
+    border-top: 1px solid black;
+}
+
+footer {
+    background-color: black;
+    background-image: url(img/fondo.jpg);
+    background-size: contain;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 200px;
+    background-repeat: no-repeat;
+    /* padding: 150px; */
+}
+
+.fecha {
+    margin-top: 5%;
+}
+
+.regis {
+    padding-top: 5%;
+}
+
+.carrusel {
+    margin: auto;
+    margin-bottom: 3%;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+#popgas {
+    width: 700px;
+    text-align: center;
+    display: none;
+
+}
+
+#poptab {
+    width: 700px;
+    text-align: center;
+    display: none;
+
+}
+
+#popshop {
+    width: 700px;
+    text-align: center;
+    display: none;
+}
+
+/* Profe ya sé que no se le debe ocupar los media query, pero se veía super feo sin estos ajustes jejeje, Discúlpeme 
+:( */
+/*Pantalla LSmall (>=576px) */
+@media(min-width:576px) and (max-width:767px) {
+    .contenedor {
+        display: none;
+    }
+
+    .carrusel {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    section {
+        margin-top: 4%;
+    }
+
+}
+
+/* Pantalla Extra small (<576px) */
+@media(max-width:575px) {
+    .contenedor {
+        display: none;
+    }
+
+    .carrusel {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    section {
+        margin-top: 4%;
+    }
+
+}
+
+#popsobre {
+    width: 60%;
+    background-color: black;
+    height: auto;
+    display: none;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+#cont {
+    margin: 0 auto;
+}
